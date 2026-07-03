@@ -1,0 +1,86 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.pageTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.error {
+  background: #fee2e2;
+  color: var(--color-danger);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.savingsRate {
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.positive { color: var(--color-income); }
+.negative { color: var(--color-expense); }
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.chartCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .chartsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    padding: 1rem;
+  }
+}

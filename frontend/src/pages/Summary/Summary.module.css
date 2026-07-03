@@ -1,0 +1,168 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pageTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.select {
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.error {
+  background: #fee2e2;
+  color: var(--color-danger);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+}
+
+.periodLabel {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.statBox {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--color-primary);
+  text-align: center;
+}
+
+.statBox.income { border-top-color: var(--color-income); }
+.statBox.expense { border-top-color: var(--color-expense); }
+.statBox.balance { border-top-color: var(--color-primary); }
+.statBox.savings { border-top-color: var(--color-secondary); }
+
+.statLabel {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.statValue {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.chartCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.categoryTable {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+}
+
+.table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.table tr:last-child td { border-bottom: none; }
+
+.right { text-align: right; }
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge.income { background: #d1fae5; color: var(--color-income); }
+.badge.expense { background: #fee2e2; color: var(--color-expense); }
+
+.income { color: var(--color-income); font-weight: 600; }
+.expense { color: var(--color-expense); font-weight: 600; }
+
+@media (max-width: 1024px) {
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .chartsGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .statsRow { grid-template-columns: 1fr 1fr; }
+  .page { padding: 1rem; }
+}

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($env:npm_config_cache = \"C:\\\\Mashira\\\\npm-cache\"; Set-Location \"C:\\\\Mashira\\\\ClaudeCode Examples\\\\PersonalExpenseTracker\"; npx --yes create-react-app frontend 2>&1 | Select-Object -Last 15)",
+      "PowerShell(node -e \"console.log\\('Node works:', process.version\\)\")",
+      "PowerShell(npm *)",
+      "Bash(npm --version)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Out-Null *)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(@\\(25412, 13088, 37516\\) | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }; Start-Sleep -Seconds 2; $r = Invoke-WebRequest -Uri \"http://localhost:8000/health\" -UseBasicParsing -ErrorAction SilentlyContinue; if \\($r\\) { \"Still running: $\\($r.Content\\)\" } else { \"Port 8000 is now free\" })",
+      "PowerShell(netstat *)",
+      "PowerShell(@\\(25412, 13088, 37516\\) | ForEach-Object { $p = Get-Process -Id $_ -ErrorAction SilentlyContinue; if \\($p\\) { \"$_ - $\\($p.ProcessName\\) - $\\($p.MainModule.FileName\\)\" } else { \"$_ - already gone\" } })",
+      "Bash(./venv/Scripts/python -c ' *)"
+    ]
+  }
+}
