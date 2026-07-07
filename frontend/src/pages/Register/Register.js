@@ -47,6 +47,7 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (loading) return;
     setApiError('');
 
     const errs = validate();

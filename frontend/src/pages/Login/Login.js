@@ -40,6 +40,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (loading) return;
     setApiError('');
 
     const errors = { email: !form.email.trim(), password: !form.password };
