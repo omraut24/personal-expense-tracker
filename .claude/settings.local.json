@@ -11,7 +11,8 @@
       "PowerShell(@\\(25412, 13088, 37516\\) | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }; Start-Sleep -Seconds 2; $r = Invoke-WebRequest -Uri \"http://localhost:8000/health\" -UseBasicParsing -ErrorAction SilentlyContinue; if \\($r\\) { \"Still running: $\\($r.Content\\)\" } else { \"Port 8000 is now free\" })",
       "PowerShell(netstat *)",
       "PowerShell(@\\(25412, 13088, 37516\\) | ForEach-Object { $p = Get-Process -Id $_ -ErrorAction SilentlyContinue; if \\($p\\) { \"$_ - $\\($p.ProcessName\\) - $\\($p.MainModule.FileName\\)\" } else { \"$_ - already gone\" } })",
-      "Bash(./venv/Scripts/python -c ' *)"
+      "Bash(./venv/Scripts/python -c ' *)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:8000/health\" -TimeoutSec 5; \"RUNNING: $\\($r.StatusCode\\) $\\($r.Content\\)\" } catch { \"NOT RUNNING: $_\" })"
     ]
   }
 }
