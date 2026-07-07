@@ -66,7 +66,7 @@ export default function Register() {
       const detail = err.response?.data?.detail;
       if (Array.isArray(detail))  setApiError(detail.map((d) => d.msg).join(', '));
       else if (detail)            setApiError(detail);
-      else if (!err.response)     setApiError('Cannot reach the server. Make sure the backend is running on port 8000.');
+      else if (!err.response)     setApiError('Cannot reach the server. Please try again in a moment.');
       else                        setApiError('Registration failed. Please try again.');
     } finally {
       setLoading(false);
