@@ -33,7 +33,7 @@ export default function ExpenseByCategoryChart({ data }) {
       legend: { position: 'right', labels: { boxWidth: 12, padding: 16 } },
       tooltip: {
         callbacks: {
-          label: (ctx) => ` ${ctx.label}: $${ctx.parsed.toFixed(2)} (${expenses[ctx.dataIndex]?.percentage}%)`,
+          label: (ctx) => ` ${ctx.label}: ₹${ctx.parsed.toFixed(2)} (${expenses[ctx.dataIndex]?.percentage}%)`,
         },
       },
     },

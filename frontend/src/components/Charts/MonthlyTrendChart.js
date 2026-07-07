@@ -40,7 +40,7 @@ export default function MonthlyTrendChart({ data }) {
     maintainAspectRatio: false,
     plugins: { legend: { position: 'top' } },
     scales: {
-      y: { beginAtZero: true, ticks: { callback: (v) => `$${v}` } },
+      y: { beginAtZero: true, ticks: { callback: (v) => `₹${v}` } },
     },
   };
 
